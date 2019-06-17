@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $host = "localhost";
     $Username = "root";
     $Password = "";
@@ -13,7 +14,6 @@
     if (!$db_selected) {
         die('Can\'t use niptict: '.mysqli_error($link));
     }
-    session_start();
     // $userDatas = file ("./data/userData.dat");
     $q = "SELECT username, password FROM user";
     $result = mysqli_query($link, $q);
